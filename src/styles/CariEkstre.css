@@ -1,0 +1,340 @@
+/* Ekstre Filtreleri */
+.ekstre-filters {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 30px;
+  align-items: flex-end;
+  flex-wrap: wrap;
+}
+
+.ekstre-filters .form-group {
+  flex: 1;
+  min-width: 200px;
+}
+
+.ekstre-filters label {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+.cari-select,
+.ekstre-filters input {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid #ddd;
+  border-radius: 6px;
+  font-size: 14px;
+  transition: border-color 0.3s;
+}
+
+.cari-select:focus,
+.ekstre-filters input:focus {
+  outline: none;
+  border-color: #3498db;
+}
+
+/* Cari Bilgi Kartı */
+.cari-bilgi-card {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  margin-bottom: 25px;
+  border-left: 5px solid #3498db;
+}
+
+.cari-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.cari-header h2 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.cari-tip {
+  font-size: 14px;
+  color: #666;
+  margin: 0;
+}
+
+.cari-iletisim {
+  text-align: right;
+}
+
+.cari-iletisim p {
+  font-size: 13px;
+  color: #666;
+  margin: 5px 0;
+}
+
+/* Ekstre İstatistikleri */
+.ekstre-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.ekstre-stat-card {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  transition: transform 0.2s;
+}
+
+.ekstre-stat-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.stat-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.stat-icon.satis {
+  background: linear-gradient(135deg, #2ecc71 0%, #27ae60 100%);
+  color: white;
+}
+
+.stat-icon.alis {
+  background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
+  color: white;
+}
+
+.stat-icon.odenen {
+  background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
+  color: white;
+}
+
+.stat-icon.borc {
+  background: linear-gradient(135deg, #f39c12 0%, #e67e22 100%);
+  color: white;
+}
+
+.stat-icon.tamam {
+  background: linear-gradient(135deg, #95a5a6 0%, #7f8c8d 100%);
+  color: white;
+}
+
+.stat-label {
+  font-size: 13px;
+  color: #666;
+  margin-bottom: 5px;
+}
+
+.stat-value {
+  font-size: 20px;
+  font-weight: 700;
+  color: #333;
+  margin: 0;
+}
+
+.borc-text {
+  color: #e74c3c;
+}
+
+.pozitif {
+  color: #2ecc71;
+}
+
+.negatif {
+  color: #e74c3c;
+}
+
+.bakiye-card {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+.bakiye-card .stat-label,
+.bakiye-card .stat-value {
+  color: white;
+}
+
+/* Ekstre Tablo */
+.ekstre-table-section {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.ekstre-table-section h3 {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 2px solid #f0f0f0;
+}
+
+.ekstre-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.ekstre-table thead {
+  background: #f8f9fa;
+}
+
+.ekstre-table th {
+  padding: 12px;
+  text-align: left;
+  font-size: 13px;
+  font-weight: 600;
+  color: #555;
+  border-bottom: 2px solid #e0e0e0;
+}
+
+.ekstre-table td {
+  padding: 12px;
+  border-bottom: 1px solid #f0f0f0;
+  font-size: 14px;
+  color: #666;
+}
+
+.ekstre-table tbody tr {
+  transition: background 0.2s;
+}
+
+.ekstre-table tbody tr:hover {
+  background: #f8f9fa;
+}
+
+.ekstre-table tbody tr.vade-gecmis-row {
+  background: #fff5f5;
+}
+
+.ekstre-table tbody tr.vade-gecmis-row:hover {
+  background: #ffebeb;
+}
+
+.mini-badge {
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 11px;
+  font-weight: 600;
+  display: inline-block;
+}
+
+.mini-badge.satis {
+  background: #d4edda;
+  color: #155724;
+}
+
+.mini-badge.alis {
+  background: #f8d7da;
+  color: #721c24;
+}
+
+.vade-gecmis-text {
+  color: #e74c3c;
+  font-weight: 600;
+}
+
+.kalan-text {
+  color: #e74c3c;
+  font-weight: 600;
+}
+
+.durum-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.durum-badge.tamam {
+  background: #d4edda;
+  color: #155724;
+}
+
+.durum-badge.kismi {
+  background: #fff3cd;
+  color: #856404;
+}
+
+.durum-badge.beklemede {
+  background: #f8d7da;
+  color: #721c24;
+}
+
+/* Empty State */
+.empty-state {
+  text-align: center;
+  padding: 80px 20px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.empty-state h3 {
+  font-size: 22px;
+  color: #666;
+  margin: 20px 0 10px;
+}
+
+.empty-state p {
+  font-size: 14px;
+  color: #999;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .ekstre-filters {
+    flex-direction: column;
+  }
+
+  .ekstre-filters .form-group {
+    width: 100%;
+  }
+
+  .cari-header {
+    flex-direction: column;
+  }
+
+  .cari-iletisim {
+    text-align: left;
+  }
+
+  .ekstre-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .table-container {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .ekstre-table {
+    min-width: 1000px;
+  }
+
+  .ekstre-table th,
+  .ekstre-table td {
+    padding: 8px;
+    font-size: 12px;
+  }
+}

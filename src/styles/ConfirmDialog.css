@@ -1,0 +1,163 @@
+.confirm-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  animation: fadeIn 0.2s;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.confirm-dialog {
+  background: white;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 450px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+  animation: slideUp 0.3s;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.confirm-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 20px 25px;
+  border-bottom: 1px solid #e0e0e0;
+  border-radius: 12px 12px 0 0;
+}
+
+.confirm-header.danger {
+  background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
+  color: white;
+  border-bottom: none;
+}
+
+.confirm-header.warning {
+  background: linear-gradient(135deg, #f39c12 0%, #e67e22 100%);
+  color: white;
+  border-bottom: none;
+}
+
+.confirm-header h3 {
+  flex: 1;
+  margin: 0;
+  font-size: 18px;
+}
+
+.confirm-close {
+  background: none;
+  border: none;
+  color: inherit;
+  cursor: pointer;
+  padding: 5px;
+  border-radius: 4px;
+  transition: background 0.2s;
+}
+
+.confirm-close:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.confirm-body {
+  padding: 30px 25px;
+}
+
+.confirm-body p {
+  margin: 0;
+  font-size: 15px;
+  color: #555;
+  line-height: 1.6;
+}
+
+.confirm-footer {
+  display: flex;
+  gap: 10px;
+  padding: 20px 25px;
+  background: #f8f9fa;
+  border-radius: 0 0 12px 12px;
+  justify-content: flex-end;
+}
+
+.btn-cancel {
+  padding: 12px 24px;
+  border: 2px solid #ddd;
+  background: white;
+  color: #666;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  transition: all 0.3s;
+}
+
+.btn-cancel:hover {
+  border-color: #999;
+  color: #333;
+}
+
+.btn-confirm {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  transition: all 0.3s;
+  color: white;
+}
+
+.btn-confirm.danger {
+  background: #e74c3c;
+}
+
+.btn-confirm.danger:hover {
+  background: #c0392b;
+}
+
+.btn-confirm.warning {
+  background: #f39c12;
+}
+
+.btn-confirm.warning:hover {
+  background: #e67e22;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .confirm-dialog {
+    width: 95%;
+  }
+
+  .confirm-footer {
+    flex-direction: column-reverse;
+  }
+
+  .btn-cancel,
+  .btn-confirm {
+    width: 100%;
+  }
+}

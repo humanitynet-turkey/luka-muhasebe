@@ -1,0 +1,401 @@
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.stat-card {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  transition: transform 0.2s;
+}
+
+.stat-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.stat-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.stat-info {
+  flex: 1;
+}
+
+.stat-title {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 5px;
+}
+
+.stat-value {
+  font-size: 24px;
+  font-weight: 700;
+  color: #333;
+}
+
+.stat-subtitle {
+  font-size: 13px;
+  color: #999;
+  margin-top: 3px;
+  font-weight: 500;
+}
+
+/* Dashboard Section */
+.dashboard-section {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  margin-bottom: 25px;
+}
+
+.dashboard-section.kritik {
+  border-left: 4px solid #f39c12;
+  background: linear-gradient(to right, #fff9e6 0%, white 100%);
+}
+
+.section-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.section-header h2 {
+  font-size: 18px;
+  margin: 0;
+}
+
+/* Bugünün Özeti */
+.bugun-ozet {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.ozet-card {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 20px;
+  border-radius: 10px;
+  color: white;
+  text-align: center;
+}
+
+.ozet-card h4 {
+  font-size: 14px;
+  margin-bottom: 15px;
+  opacity: 0.9;
+}
+
+.ozet-number {
+  font-size: 36px;
+  font-weight: 700;
+  margin: 10px 0;
+}
+
+.ozet-detail {
+  font-size: 13px;
+  opacity: 0.9;
+  margin: 0;
+}
+
+/* Kritik Stok Listesi */
+.kritik-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.kritik-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  background: white;
+  border-radius: 8px;
+  border-left: 3px solid #f39c12;
+}
+
+.kritik-kod {
+  margin-left: 10px;
+  font-size: 12px;
+  color: #999;
+  background: #f0f0f0;
+  padding: 2px 8px;
+  border-radius: 4px;
+}
+
+.kritik-badge {
+  background: #f39c12;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+/* Grafikler */
+.charts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 20px;
+  margin-bottom: 25px;
+}
+
+.chart-card {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.chart-card h3 {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Son İşlemler */
+.dashboard-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  margin-bottom: 25px;
+}
+
+.recent-card {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.recent-card h3 {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #f0f0f0;
+}
+
+.recent-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.recent-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+  background: #f8f9fa;
+  border-radius: 6px;
+  transition: background 0.2s;
+}
+
+.recent-item:hover {
+  background: #e9ecef;
+}
+
+.recent-item strong {
+  font-size: 14px;
+  color: #333;
+  display: block;
+}
+
+.recent-type {
+  margin-left: 10px;
+  font-size: 12px;
+  color: #999;
+}
+
+.recent-badge {
+  display: inline-block;
+  margin-left: 10px;
+  padding: 3px 10px;
+  border-radius: 12px;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.recent-badge.satis {
+  background: #d4edda;
+  color: #155724;
+}
+
+.recent-badge.alis {
+  background: #f8d7da;
+  color: #721c24;
+}
+
+.recent-date, .recent-amount {
+  font-size: 13px;
+  color: #666;
+  font-weight: 600;
+}
+
+/* Welcome Message */
+.welcome-message {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 40px;
+  border-radius: 12px;
+  color: white;
+  text-align: center;
+}
+
+.welcome-message h2 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.welcome-message p {
+  font-size: 16px;
+  opacity: 0.9;
+}
+
+/* Vade Uyarıları */
+.vade-gecmis-section {
+  border-left: 4px solid #e74c3c;
+  background: linear-gradient(to right, #ffe6e6 0%, white 100%);
+}
+
+.vade-yaklasan-section {
+  border-left: 4px solid #f39c12;
+  background: linear-gradient(to right, #fff9e6 0%, white 100%);
+}
+
+.vade-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.vade-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  background: white;
+  border-radius: 8px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.vade-item:hover {
+  transform: translateX(5px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.vade-item.gecmis {
+  border-left: 3px solid #e74c3c;
+}
+
+.vade-item.yaklasan {
+  border-left: 3px solid #f39c12;
+}
+
+.vade-info {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.vade-info strong {
+  font-size: 15px;
+  color: #333;
+}
+
+.vade-cari {
+  font-size: 13px;
+  color: #666;
+}
+
+.vade-gun {
+  font-size: 12px;
+  color: #999;
+  font-style: italic;
+}
+
+.vade-tutar {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 5px;
+}
+
+.tutar-badge {
+  padding: 8px 15px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.tutar-badge.gecmis {
+  background: #e74c3c;
+  color: white;
+}
+
+.tutar-badge.yaklasan {
+  background: #f39c12;
+  color: white;
+}
+
+.vade-tarih {
+  font-size: 12px;
+  color: #999;
+}
+
+/* Responsive - Vade */
+@media (max-width: 768px) {
+  .vade-item {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+  }
+  
+  .vade-tutar {
+    align-items: flex-start;
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .stat-value {
+    font-size: 20px;
+  }
+  
+  .charts-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .dashboard-row {
+    grid-template-columns: 1fr;
+  }
+  
+  .ozet-number {
+    font-size: 28px;
+  }
+  
+  .welcome-message h2 {
+    font-size: 22px;
+  }
+}

@@ -1,0 +1,169 @@
+/* Stok İstatistikleri */
+.stok-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.stat-item {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  border-left: 4px solid #3498db;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.stat-item.kritik {
+  border-left-color: #f39c12;
+  background: #fff9e6;
+}
+
+.stat-item.tukenen {
+  border-left-color: #e74c3c;
+  background: #ffe6e6;
+}
+
+.stat-item.deger {
+  border-left-color: #2ecc71;
+  background: #e8f8f5;
+}
+
+.stat-label {
+  font-size: 13px;
+  color: #666;
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+.stat-value {
+  font-size: 24px;
+  font-weight: 700;
+  color: #333;
+}
+
+/* Filtre Butonları */
+.kritik-btn {
+  border-color: #f39c12 !important;
+  color: #f39c12;
+}
+
+.kritik-btn.active {
+  background: #f39c12 !important;
+  color: white !important;
+}
+
+.tukenen-btn {
+  border-color: #e74c3c !important;
+  color: #e74c3c;
+}
+
+.tukenen-btn.active {
+  background: #e74c3c !important;
+  color: white !important;
+}
+
+/* Stok Durum Badge */
+.stok-badge {
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.stok-badge.normal {
+  background: #d4edda;
+  color: #155724;
+}
+
+.stok-badge.kritik {
+  background: #fff3cd;
+  color: #856404;
+}
+
+.stok-badge.tukendi {
+  background: #f8d7da;
+  color: #721c24;
+}
+
+/* Tablo Satır Renklendirme */
+.data-table tbody tr.kritik {
+  background: #fffbf0;
+}
+
+.data-table tbody tr.tukendi {
+  background: #fff5f5;
+}
+
+.data-table tbody tr.kritik:hover {
+  background: #fff8e6;
+}
+
+.data-table tbody tr.tukendi:hover {
+  background: #ffebeb;
+}
+
+/* Form Özel Stiller */
+.form-group input[type="number"] {
+  text-align: right;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .stok-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .stat-value {
+    font-size: 20px;
+  }
+  
+  .page-header {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .page-header > div {
+    width: 100%;
+  }
+
+  .page-header button {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .filters {
+    flex-direction: column;
+  }
+
+  .filter-buttons {
+    flex-wrap: wrap;
+  }
+
+  .filter-buttons button {
+    flex: 1;
+    min-width: 100px;
+  }
+  
+  .table-container {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  .data-table {
+    min-width: 800px;
+  }
+
+  .modal-content {
+    width: 95%;
+    max-width: none;
+    margin: 10px;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+}
