@@ -54,7 +54,7 @@ const Kasa = () => {
       setKasaList(defaultKasa);
       storage.save('kasaList', defaultKasa);
     }
-    document.title = 'Kasa/Banka - Hira Muhasebe';
+    document.title = 'Kasa/Banka - Luka Muhasebe';
   }, []);
 
   // Verileri kaydet
@@ -174,6 +174,14 @@ const Kasa = () => {
 };
 
 const confirmDelete = () => {
+  // Silinecek hareketi bul ve kasa bakiyesini geri al
+  const deletedHareket = hareketList.find(h => h.id === deleteId);
+  if (deletedHareket) {
+    // İşlem tersini yap: gelir ise çıkar, gider ise ekle
+    const reverseIslemTipi = deletedHareket.islemTipi === 'gelir' ? 'gider' : 'gelir';
+    updateKasaBakiye(deletedHareket.kasaId, deletedHareket.tutar, reverseIslemTipi);
+  }
+
   setHareketList(hareketList.filter(h => h.id !== deleteId));
   showSuccess('Hareket silindi!');
   setShowConfirm(false);

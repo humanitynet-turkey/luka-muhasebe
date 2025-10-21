@@ -209,71 +209,142 @@
 
 /* Responsive */
 @media (max-width: 768px) {
+  .page-container {
+    padding: 15px;
+  }
+
+  .page-title {
+    font-size: 20px;
+  }
+
   .kasa-cards {
     grid-template-columns: 1fr;
+    gap: 15px;
   }
-  
+
   .kasa-stats {
     grid-template-columns: 1fr;
+    gap: 15px;
   }
-  
-  .kasa-card {
+
+  .kasa-stats .stat-item {
     padding: 20px;
   }
-  
+
+  .stat-label {
+    font-size: 12px;
+  }
+
+  .stat-value {
+    font-size: 20px;
+  }
+
+  .kasa-card {
+    padding: 20px;
+    gap: 15px;
+  }
+
   .kasa-icon {
     width: 50px;
     height: 50px;
   }
-  
+
+  .kasa-info h3 {
+    font-size: 16px;
+  }
+
+  .kasa-tip {
+    font-size: 11px;
+  }
+
   .kasa-bakiye {
     font-size: 20px;
   }
-  
+
   .filter-row {
     flex-direction: column;
     align-items: stretch;
+    gap: 10px;
   }
-  
+
   .kasa-filter {
     width: 100%;
+    font-size: 13px;
   }
-  
+
   .page-header {
     flex-direction: column;
-    gap: 15px;
+    align-items: stretch;
+    gap: 10px;
   }
-  
-  .page-header > div {
+
+  .page-header > div:first-child {
     width: 100%;
-    flex-direction: column;
   }
-  
-  .page-header button {
+
+  .page-header > div:last-child {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+  }
+
+  .page-header button,
+  .btn-primary {
     width: 100%;
     justify-content: center;
+    font-size: 13px;
+    padding: 10px 15px;
   }
 
   .filters {
     flex-direction: column;
   }
 
+  .search-box {
+    padding: 10px 12px;
+  }
+
   .filter-buttons {
     flex-wrap: wrap;
+    gap: 8px;
   }
 
   .filter-buttons button {
-    flex: 1;
-    min-width: 80px;
+    flex: 1 1 calc(50% - 4px);
+    min-width: 0;
+    font-size: 13px;
+    padding: 8px 10px;
   }
 
   .table-container {
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
+    margin: 0 -15px;
+    padding: 0 15px;
   }
 
   .data-table {
     min-width: 800px;
+    font-size: 13px;
+  }
+
+  .data-table th,
+  .data-table td {
+    padding: 10px 8px;
+  }
+
+  .badge {
+    font-size: 11px;
+    padding: 4px 10px;
+  }
+
+  .action-buttons {
+    justify-content: center;
+  }
+
+  .action-buttons button {
+    padding: 6px;
   }
 
   .modal-content {
@@ -282,7 +353,40 @@
     margin: 10px;
   }
 
+  .modal-content.small {
+    width: 95%;
+    max-width: none;
+  }
+
+  .modal-header h2 {
+    font-size: 18px;
+  }
+
   .form-grid {
     grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .form-group.full-width {
+    grid-column: span 1;
+  }
+
+  .form-group label {
+    font-size: 13px;
+  }
+
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    font-size: 13px;
+    padding: 10px;
+  }
+
+  .modal-footer {
+    padding: 15px 20px;
+  }
+
+  .keyboard-hint {
+    display: none;
   }
 }

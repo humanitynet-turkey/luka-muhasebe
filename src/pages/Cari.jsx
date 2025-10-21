@@ -54,7 +54,7 @@ const Cari = () => {
 
   // LocalStorage'dan verileri yükle
   useEffect(() => {
-    document.title = 'Cari Hesaplar - Hira Muhasebe';
+    document.title = 'Cari Hesaplar - Luka Muhasebe';
     
     const savedCari = storage.get('cariList');
     if (savedCari) {
@@ -243,55 +243,51 @@ return (
         ) : (
         <div className="table-container">
           <table className="data-table">
-            <div className="table-container">
-              <table className="data-table">
-                <thead>
-                  <tr>
-                    <th>Ünvan</th>
-                    <th>Tip</th>
-                    <th>Vergi No</th>
-                    <th>Telefon</th>
-                    <th>Yetkili</th>
-                    <th>Kayıt Tarihi</th>
-                    <th>İşlemler</th>
+            <thead>
+              <tr>
+                <th>Ünvan</th>
+                <th>Tip</th>
+                <th>Vergi No</th>
+                <th>Telefon</th>
+                <th>Yetkili</th>
+                <th>Kayıt Tarihi</th>
+                <th>İşlemler</th>
+              </tr>
+            </thead>
+            <tbody>
+              {filteredCari.length === 0 ? (
+                <tr>
+                  <td colSpan="7" style={{ textAlign: 'center', padding: '40px' }}>
+                    {searchTerm ? 'Arama sonucu bulunamadı' : 'Henüz cari kaydı yok'}
+                  </td>
+                </tr>
+                ) : (
+                filteredCari.map(cari => (
+                  <tr key={cari.id}>
+                    <td><strong>{cari.unvan}</strong></td>
+                    <td>
+                      <span className={`badge ${cari.tip}`}>
+                        {cari.tip === 'musteri' ? 'Müşteri' : 'Tedarikçi'}
+                      </span>
+                    </td>
+                    <td>{cari.vergiNo}</td>
+                    <td>{cari.telefon}</td>
+                    <td>{cari.yetkili}</td>
+                    <td>{cari.tarih}</td>
+                    <td>
+                      <div className="action-buttons">
+                        <button className="btn-edit" onClick={() => handleEdit(cari)}>
+                          <Edit2 size={16} />
+                        </button>
+                        <button className="btn-delete" onClick={() => handleDelete(cari.id)}>
+                          <Trash2 size={16} />
+                        </button>
+                      </div>
+                    </td>
                   </tr>
-                </thead>
-                <tbody>
-                  {filteredCari.length === 0 ? (
-                    <tr>
-                      <td colSpan="7" style={{ textAlign: 'center', padding: '40px' }}>
-                        {searchTerm ? 'Arama sonucu bulunamadı' : 'Henüz cari kaydı yok'}
-                      </td>
-                    </tr>
-                    ) : (
-                    filteredCari.map(cari => (
-                      <tr key={cari.id}>
-                        <td><strong>{cari.unvan}</strong></td>
-                        <td>
-                          <span className={`badge ${cari.tip}`}>
-                            {cari.tip === 'musteri' ? 'Müşteri' : 'Tedarikçi'}
-                          </span>
-                        </td>
-                        <td>{cari.vergiNo}</td>
-                        <td>{cari.telefon}</td>
-                        <td>{cari.yetkili}</td>
-                        <td>{cari.tarih}</td>
-                        <td>
-                          <div className="action-buttons">
-                            <button className="btn-edit" onClick={() => handleEdit(cari)}>
-                              <Edit2 size={16} />
-                            </button>
-                            <button className="btn-delete" onClick={() => handleDelete(cari.id)}>
-                              <Trash2 size={16} />
-                            </button>
-                          </div>
-                        </td>
-                      </tr>
-                      ))
-                    )}
-                  </tbody>
-                </table>
-              </div>
+                  ))
+                )}
+              </tbody>
             </table>
           </div>
           )}      

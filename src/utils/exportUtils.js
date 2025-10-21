@@ -11,7 +11,7 @@ export const exportToExcel = (data, fileName, sheetName = 'Sayfa1') => {
     XLSX.writeFile(wb, `${fileName}.xlsx`);
     return true;
   } catch (error) {
-    console.error('Excel export hatası:', error);
+    // Error logging removed for production
     return false;
   }
 };
@@ -126,7 +126,7 @@ export const exportFaturaToPDF = (fatura, firmaData = {}) => {
     
     autoTable(doc, {
       startY: 60,
-      head: [['Urun', 'Miktar', 'Birim Fiyat', 'KDV', 'Tutar', 'KDV Tutari', 'Toplam']],
+      head: [['Ürün', 'Miktar', 'Birim Fiyat', 'KDV', 'Tutar', 'KDV Tutar', 'Toplam']],
       body: tableData,
       theme: 'grid',
       headStyles: { fillColor: [52, 152, 219], fontSize: 9 },
@@ -146,7 +146,7 @@ export const exportFaturaToPDF = (fatura, firmaData = {}) => {
     const finalY = doc.lastAutoTable.finalY + 10;
     
     doc.text('Ara Toplam:', 140, finalY);
-    doc.text('KDV Toplami:', 140, finalY + 7);
+    doc.text('KDV Toplamı:', 140, finalY + 7);
     doc.text('GENEL TOPLAM:', 140, finalY + 14);
     
     doc.text(`${parseFloat(fatura.tutar).toFixed(2)} TL`, 180, finalY);
@@ -158,7 +158,7 @@ export const exportFaturaToPDF = (fatura, firmaData = {}) => {
     // Açıklama
     if (fatura.aciklama) {
       doc.setFontSize(9);
-      doc.text('Aciklama:', 14, finalY + 25);
+      doc.text('Açıklama:', 14, finalY + 25);
       const splitText = doc.splitTextToSize(fatura.aciklama, 180);
       doc.text(splitText, 14, finalY + 30);
     }
@@ -172,7 +172,7 @@ export const exportFaturaToPDF = (fatura, firmaData = {}) => {
     
     return true;
   } catch (error) {
-    console.error('PDF olusturma hatasi:', error);
+    // Error logging removed for production
     return false;
   }
 };
@@ -220,7 +220,7 @@ export const printFaturaPDF = (fatura, firmaData = {}) => {
     
     autoTable(doc, {
       startY: 60,
-      head: [['Urun', 'Miktar', 'Birim Fiyat', 'KDV', 'Tutar', 'KDV Tutari', 'Toplam']],
+      head: [['Ürün', 'Miktar', 'Birim Fiyat', 'KDV', 'Tutar', 'KDV Tutar', 'Toplam']],
       body: tableData,
       theme: 'grid',
       headStyles: { fillColor: [52, 152, 219], fontSize: 9 },
@@ -239,7 +239,7 @@ export const printFaturaPDF = (fatura, firmaData = {}) => {
     const finalY = doc.lastAutoTable.finalY + 10;
     
     doc.text('Ara Toplam:', 140, finalY);
-    doc.text('KDV Toplami:', 140, finalY + 7);
+    doc.text('KDV Toplamı:', 140, finalY + 7);
     doc.text('GENEL TOPLAM:', 140, finalY + 14);
     
     doc.text(`${parseFloat(fatura.tutar).toFixed(2)} TL`, 180, finalY);
@@ -250,7 +250,7 @@ export const printFaturaPDF = (fatura, firmaData = {}) => {
     
     if (fatura.aciklama) {
       doc.setFontSize(9);
-      doc.text('Aciklama:', 14, finalY + 25);
+      doc.text('Açıklama:', 14, finalY + 25);
       const splitText = doc.splitTextToSize(fatura.aciklama, 180);
       doc.text(splitText, 14, finalY + 30);
     }
@@ -263,7 +263,7 @@ export const printFaturaPDF = (fatura, firmaData = {}) => {
     
     return true;
   } catch (error) {
-    console.error('PDF yazdirma hatasi:', error);
+    // Error logging removed for production
     return false;
   }
 };

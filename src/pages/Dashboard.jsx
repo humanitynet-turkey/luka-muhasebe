@@ -32,14 +32,12 @@ const Dashboard = () => {
   useEffect(() => {
     document.title = 'Dashboard - Luka Muhasebe';
     
-  // Supabase bağlantı testi
-    const testSupabase = async () => {
-      console.log('🔌 Supabase bağlantısı test ediliyor...');
-      const data = await storage.fetchFromSupabase('cari_list');
-      console.log('✅ Supabase bağlantısı başarılı! Cari sayısı:', data.length);
-    };
-    
-    testSupabase();
+  // Supabase bağlantı testi (optional)
+    // const testSupabase = async () => {
+    //   const data = await storage.fetchFromSupabase('cari_list');
+    // };
+    // testSupabase();
+
     loadDashboardData();
   }, []);
 

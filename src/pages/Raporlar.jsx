@@ -28,7 +28,7 @@ const Raporlar = () => {
       hareketList,
       kasaList
     });
-    document.title = 'Raporlar - Hira Muhasebe';
+    document.title = 'Raporlar - Luka Muhasebe';
   }, [activeTab]);
 
   // Cari Raporu

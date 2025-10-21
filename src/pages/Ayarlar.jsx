@@ -28,7 +28,7 @@ const Ayarlar = () => {
 
   // Firma bilgilerini yükle
   useEffect(() => {
-    document.title = 'Ayarlar - Hira Muhasebe';
+    document.title = 'Ayarlar - Luka Muhasebe';
   }, []);
 
   useEffect(() => {

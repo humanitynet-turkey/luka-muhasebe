@@ -32,7 +32,7 @@ const Stok = () => {
     if (savedStok) {
       setStokList(savedStok);
     }
-    document.title = 'Stok Yönetimi - Hira Muhasebe';
+    document.title = 'Stok Yönetimi - Luka Muhasebe';
   }, []);
 
   // Veri değiştiğinde kaydet

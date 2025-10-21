@@ -9,7 +9,7 @@ export const storage = {
         localStorage.setItem(key, JSON.stringify(data));
         return true;
       } catch (error) {
-        console.error('Local save error:', error);
+        // Error logging removed for production
         return false;
       }
     },
@@ -18,7 +18,7 @@ export const storage = {
         const data = localStorage.getItem(key);
         return data ? JSON.parse(data) : null;
       } catch (error) {
-        console.error('Local get error:', error);
+        // Error logging removed for production
         return null;
       }
     },
@@ -27,7 +27,7 @@ export const storage = {
         localStorage.removeItem(key);
         return true;
       } catch (error) {
-        console.error('Local remove error:', error);
+        // Error logging removed for production
         return false;
       }
     },
@@ -36,7 +36,7 @@ export const storage = {
         localStorage.clear();
         return true;
       } catch (error) {
-        console.error('Local clear error:', error);
+        // Error logging removed for production
         return false;
       }
     }
@@ -53,7 +53,7 @@ export const storage = {
       if (error) throw error;
       return data || [];
     } catch (error) {
-      console.error(`Fetch error from ${table}:`, error);
+      // Error logging removed for production
       return [];
     }
   },
@@ -71,7 +71,7 @@ export const storage = {
       if (error) throw error;
       return data[0];
     } catch (error) {
-      console.error(`Save error to ${table}:`, error);
+      // Error logging removed for production
       return null;
     }
   },
@@ -87,7 +87,7 @@ export const storage = {
       if (error) throw error;
       return data[0];
     } catch (error) {
-      console.error(`Update error in ${table}:`, error);
+      // Error logging removed for production
       return null;
     }
   },
@@ -102,7 +102,7 @@ export const storage = {
       if (error) throw error;
       return true;
     } catch (error) {
-      console.error(`Delete error from ${table}:`, error);
+      // Error logging removed for production
       return false;
     }
   },

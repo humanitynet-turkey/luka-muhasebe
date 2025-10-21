@@ -115,21 +115,63 @@
 @media (max-width: 768px) {
   .sidebar {
     transform: translateX(-100%);
+    width: 280px;
+    box-shadow: 2px 0 10px rgba(0,0,0,0.3);
   }
 
   .sidebar.open {
     transform: translateX(0);
   }
 
+  .sidebar-header {
+    padding: 25px 20px;
+  }
+
+  .sidebar-header h2 {
+    font-size: 22px;
+  }
+
+  .sidebar-header p {
+    font-size: 11px;
+  }
+
   .sidebar-close {
     display: block;
+  }
+
+  .sidebar-nav {
+    padding: 15px 0;
+  }
+
+  .nav-item {
+    padding: 12px 20px;
+    font-size: 15px;
+  }
+
+  .nav-item svg {
+    width: 20px;
+    height: 20px;
   }
 
   .hamburger-btn {
     display: block;
   }
 
+  .hamburger-btn svg {
+    width: 24px;
+    height: 24px;
+  }
+
   .sidebar-overlay {
     display: block;
+  }
+
+  .sidebar-overlay.hidden {
+    display: none;
+  }
+
+  /* Ensure page content shifts properly when sidebar is open on mobile */
+  body.sidebar-open {
+    overflow: hidden;
   }
 }

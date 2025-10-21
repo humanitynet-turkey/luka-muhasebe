@@ -45,7 +45,7 @@ const CariEkstre = () => {
       setSelectedCari(null);
       setCariFaturalar([]);
     }
-    document.title = 'Cari Ekstre - Hira Muhasebe';
+    document.title = 'Cari Ekstre - Luka Muhasebe';
   }, [selectedCariId, faturaList, cariList, startDate, endDate]);
 
   // Cari özet hesapla

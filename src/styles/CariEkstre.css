@@ -303,38 +303,149 @@
 
 /* Responsive */
 @media (max-width: 768px) {
+  .page-container {
+    padding: 15px;
+  }
+
+  .page-title {
+    font-size: 20px;
+  }
+
   .ekstre-filters {
     flex-direction: column;
+    gap: 10px;
   }
 
   .ekstre-filters .form-group {
     width: 100%;
+    min-width: 0;
+  }
+
+  .ekstre-filters label {
+    font-size: 13px;
+  }
+
+  .cari-select,
+  .ekstre-filters input {
+    font-size: 13px;
+    padding: 10px;
+  }
+
+  .cari-bilgi-card {
+    padding: 20px;
   }
 
   .cari-header {
     flex-direction: column;
+    gap: 15px;
+  }
+
+  .cari-header h2 {
+    font-size: 20px;
+  }
+
+  .cari-tip {
+    font-size: 13px;
   }
 
   .cari-iletisim {
     text-align: left;
   }
 
+  .cari-iletisim p {
+    font-size: 12px;
+  }
+
   .ekstre-stats {
     grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .ekstre-stat-card {
+    padding: 15px;
+    gap: 12px;
+  }
+
+  .stat-icon {
+    width: 45px;
+    height: 45px;
+  }
+
+  .stat-label {
+    font-size: 12px;
+  }
+
+  .stat-value {
+    font-size: 18px;
+  }
+
+  .ekstre-table-section {
+    padding: 20px;
+  }
+
+  .ekstre-table-section h3 {
+    font-size: 16px;
+    margin-bottom: 15px;
   }
 
   .table-container {
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
+    margin: 0 -20px;
+    padding: 0 20px;
   }
 
   .ekstre-table {
     min-width: 1000px;
+    font-size: 13px;
   }
 
   .ekstre-table th,
   .ekstre-table td {
-    padding: 8px;
+    padding: 8px 6px;
     font-size: 12px;
+  }
+
+  .mini-badge {
+    font-size: 10px;
+    padding: 3px 8px;
+  }
+
+  .durum-badge {
+    width: 20px;
+    height: 20px;
+    font-size: 11px;
+  }
+
+  .empty-state {
+    padding: 60px 20px;
+  }
+
+  .empty-state h3 {
+    font-size: 18px;
+  }
+
+  .empty-state p {
+    font-size: 13px;
+  }
+
+  .filters {
+    flex-direction: column;
+  }
+
+  .filter-buttons {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .filter-buttons button {
+    flex: 1 1 calc(50% - 4px);
+    min-width: 0;
+    font-size: 13px;
+    padding: 8px 10px;
+  }
+
+  .keyboard-hint {
+    display: none;
   }
 }

@@ -367,7 +367,7 @@
     align-items: stretch;
     gap: 10px;
   }
-  
+
   .vade-tutar {
     align-items: flex-start;
   }
@@ -375,27 +375,181 @@
 
 /* Responsive */
 @media (max-width: 768px) {
+  .page-container {
+    padding: 15px;
+  }
+
+  .page-title {
+    font-size: 20px;
+  }
+
   .stats-grid {
     grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
   }
-  
+
+  .stat-card {
+    padding: 15px;
+    gap: 12px;
+  }
+
+  .stat-icon {
+    width: 45px;
+    height: 45px;
+  }
+
+  .stat-title {
+    font-size: 12px;
+  }
+
   .stat-value {
     font-size: 20px;
   }
-  
-  .charts-grid {
-    grid-template-columns: 1fr;
+
+  .stat-subtitle {
+    font-size: 12px;
   }
-  
-  .dashboard-row {
-    grid-template-columns: 1fr;
+
+  .dashboard-section {
+    padding: 20px;
+    margin-bottom: 20px;
   }
-  
+
+  .section-header h2 {
+    font-size: 16px;
+  }
+
+  .bugun-ozet {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .ozet-card {
+    padding: 15px;
+  }
+
+  .ozet-card h4 {
+    font-size: 13px;
+  }
+
   .ozet-number {
     font-size: 28px;
   }
-  
+
+  .ozet-detail {
+    font-size: 12px;
+  }
+
+  .kritik-list {
+    gap: 10px;
+  }
+
+  .kritik-item {
+    padding: 12px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .kritik-kod {
+    font-size: 11px;
+    margin-left: 0;
+    margin-top: 5px;
+  }
+
+  .kritik-badge {
+    font-size: 12px;
+    padding: 5px 10px;
+    align-self: flex-start;
+  }
+
+  .charts-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .chart-card {
+    padding: 20px;
+  }
+
+  .chart-card h3 {
+    font-size: 15px;
+    margin-bottom: 15px;
+  }
+
+  .dashboard-row {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .recent-card {
+    padding: 20px;
+  }
+
+  .recent-card h3 {
+    font-size: 15px;
+  }
+
+  .recent-item {
+    padding: 10px;
+  }
+
+  .recent-item strong {
+    font-size: 13px;
+  }
+
+  .recent-type {
+    font-size: 11px;
+  }
+
+  .recent-badge {
+    font-size: 10px;
+    padding: 2px 8px;
+  }
+
+  .recent-date,
+  .recent-amount {
+    font-size: 12px;
+  }
+
+  .welcome-message {
+    padding: 30px 20px;
+  }
+
   .welcome-message h2 {
     font-size: 22px;
+  }
+
+  .welcome-message p {
+    font-size: 14px;
+  }
+
+  .vade-list {
+    gap: 10px;
+  }
+
+  .vade-info strong {
+    font-size: 14px;
+  }
+
+  .vade-cari {
+    font-size: 12px;
+  }
+
+  .vade-gun {
+    font-size: 11px;
+  }
+
+  .tutar-badge {
+    padding: 6px 12px;
+    font-size: 13px;
+  }
+
+  .vade-tarih {
+    font-size: 11px;
+  }
+
+  .keyboard-hint {
+    display: none;
   }
 }

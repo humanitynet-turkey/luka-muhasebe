@@ -415,62 +415,148 @@
 
 /* Responsive */
 @media (max-width: 768px) {
+  .page-container {
+    padding: 15px;
+  }
+
+  .page-title {
+    font-size: 20px;
+  }
+
   .fatura-stats {
     grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  .fatura-stats .stat-item {
+    padding: 15px;
+  }
+
+  .stat-label {
+    font-size: 12px;
+  }
+
+  .stat-value {
+    font-size: 20px;
   }
 
   .page-header {
     flex-direction: column;
+    align-items: stretch;
     gap: 10px;
   }
 
-  .page-header > div {
+  .page-header > div:first-child {
     width: 100%;
-    flex-direction: column;
   }
 
-  .page-header button {
+  .page-header > div:last-child {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+  }
+
+  .page-header button,
+  .btn-primary {
     width: 100%;
     justify-content: center;
+    font-size: 13px;
+    padding: 10px 15px;
   }
 
   .filters {
     flex-direction: column;
   }
 
+  .search-box {
+    padding: 10px 12px;
+  }
+
   .filter-buttons {
     flex-wrap: wrap;
+    gap: 8px;
   }
 
   .filter-buttons button {
-    flex: 1;
-    min-width: 80px;
+    flex: 1 1 calc(50% - 4px);
+    min-width: 0;
+    font-size: 13px;
+    padding: 8px 10px;
   }
-  
+
   .fatura-form-header {
     grid-template-columns: 1fr;
+    padding: 20px;
   }
-  
+
+  .urun-ekleme-section {
+    padding: 15px;
+  }
+
+  .urun-ekleme-section h3 {
+    font-size: 16px;
+  }
+
   .urun-form {
     grid-template-columns: 1fr;
+    gap: 10px;
   }
-  
+
+  .urun-form select,
+  .urun-form input {
+    font-size: 13px;
+  }
+
+  .btn-add-urun {
+    width: 100%;
+    justify-content: center;
+    padding: 10px;
+  }
+
+  .urun-list-section {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
   .urun-table,
   .detail-table {
     font-size: 12px;
+    min-width: 600px;
   }
-  
+
   .urun-table th,
   .urun-table td,
   .detail-table th,
   .detail-table td {
-    padding: 8px;
+    padding: 8px 6px;
   }
-  
+
+  .btn-remove-urun {
+    padding: 5px;
+  }
+
   .detail-header {
     grid-template-columns: 1fr;
+    padding: 15px;
   }
-  
+
+  .detail-header h3 {
+    font-size: 18px;
+  }
+
+  .detail-totals {
+    padding: 15px;
+  }
+
+  .total-row {
+    font-size: 14px;
+  }
+
+  .total-row.grand {
+    font-size: 16px;
+  }
+
   .modal-content.large {
     width: 95%;
     max-width: none;
@@ -483,13 +569,38 @@
     margin: 10px;
   }
 
+  .modal-header h2 {
+    font-size: 18px;
+  }
+
   .table-container {
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
+    margin: 0 -15px;
+    padding: 0 15px;
   }
 
   .data-table {
     min-width: 900px;
+    font-size: 13px;
+  }
+
+  .data-table th,
+  .data-table td {
+    padding: 10px 8px;
+  }
+
+  .badge {
+    font-size: 11px;
+    padding: 4px 10px;
+  }
+
+  .action-buttons {
+    justify-content: center;
+  }
+
+  .action-buttons button {
+    padding: 6px;
   }
 
   .btn-pdf, .btn-print {
@@ -500,6 +611,57 @@
   .modal-header > div {
     flex-wrap: wrap;
     gap: 8px;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .form-group.full-width {
+    grid-column: span 1;
+  }
+
+  .form-group label {
+    font-size: 13px;
+  }
+
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    font-size: 13px;
+    padding: 10px;
+  }
+
+  .modal-footer {
+    padding: 15px 20px;
+  }
+
+  .fatura-detail {
+    padding: 15px;
+  }
+
+  .odeme-modal-content {
+    padding: 20px;
+    margin: 10px;
+  }
+
+  .odeme-info {
+    padding: 15px;
+  }
+
+  .odeme-info-row {
+    font-size: 14px;
+    padding: 8px 0;
+  }
+
+  .odeme-form input {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .keyboard-hint {
+    display: none;
   }
 }
 

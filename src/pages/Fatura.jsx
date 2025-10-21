@@ -52,7 +52,7 @@ const Fatura = () => {
     if (savedStok) setStokList(savedStok);
     if (savedFirma) setFirmaData(savedFirma);
 
-    document.title = 'Fatura İşlemleri - Hira Muhasebe';
+    document.title = 'Fatura İşlemleri - Luka Muhasebe';
   }, []);
 
   useEffect(() => {
@@ -285,21 +285,22 @@ if (odemeMiktari > kalanBorc) {
       yeniOdemeDurumu = 'tamam';
     }
 
-    const updatedFaturaList = faturaList.map(f => 
+    const updatedFaturaList = faturaList.map(f =>
       f.id === selectedPaymentFatura.id
-        ? { 
-            ...f, 
+        ? {
+            ...f,
             odenenTutar: yeniOdenenTutar,
-            odemeDurumu: yeniOdemeDurumu 
+            odemeDurumu: yeniOdemeDurumu
           }
         : f
     );
 
     setFaturaList(updatedFaturaList);
+    storage.save('faturaList', updatedFaturaList);
     setShowPaymentModal(false);
     setSelectedPaymentFatura(null);
     setPaymentAmount('');
-    
+
     showSuccess(`${odemeMiktari.toFixed(2)} ₺ ödeme kaydedildi!`);
   };
 

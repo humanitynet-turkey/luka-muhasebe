@@ -204,40 +204,126 @@
 
 /* Responsive */
 @media (max-width: 768px) {
+  .page-container {
+    padding: 15px;
+  }
+
+  .page-title {
+    font-size: 20px;
+  }
+
   .rapor-tabs {
     flex-direction: column;
+    gap: 5px;
+    margin-bottom: 20px;
   }
-  
+
   .tab-button {
     width: 100%;
     justify-content: center;
+    padding: 10px 20px;
+    font-size: 14px;
+    margin-bottom: 0;
   }
-  
+
+  .tab-button:hover {
+    background: #f0f0f0;
+  }
+
+  .tab-button.active {
+    background: #f0f0f0;
+  }
+
   .rapor-stats {
     grid-template-columns: 1fr;
+    gap: 15px;
   }
-  
+
+  .rapor-card {
+    padding: 20px;
+  }
+
+  .rapor-card h3 {
+    font-size: 13px;
+    margin-bottom: 10px;
+  }
+
   .big-number {
     font-size: 28px;
   }
-  
+
+  .sub-text {
+    font-size: 12px;
+  }
+
   .rapor-table-section {
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
+    padding: 20px;
+    margin: 0 -15px;
   }
-  
+
+  .rapor-table-section h3 {
+    font-size: 16px;
+    margin-bottom: 15px;
+  }
+
   .rapor-table {
     min-width: 600px;
-  }
-  
-  .chart-section {
-    padding: 15px;
+    font-size: 13px;
   }
 
   .rapor-table th,
   .rapor-table td {
     font-size: 12px;
-    padding: 8px;
+    padding: 8px 6px;
+  }
+
+  .mini-badge {
+    font-size: 10px;
+    padding: 3px 8px;
+  }
+
+  .chart-section {
+    padding: 15px;
+    margin: 0 -15px 20px -15px;
+  }
+
+  .chart-section h3 {
+    font-size: 16px;
+    margin-bottom: 15px;
+  }
+
+  .filters {
+    flex-direction: column;
+  }
+
+  .filter-buttons {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .filter-buttons button {
+    flex: 1 1 calc(50% - 4px);
+    min-width: 0;
+    font-size: 13px;
+    padding: 8px 10px;
+  }
+
+  .empty-state {
+    padding: 40px 20px;
+  }
+
+  .empty-state h3 {
+    font-size: 18px;
+  }
+
+  .empty-state p {
+    font-size: 13px;
+  }
+
+  .keyboard-hint {
+    display: none;
   }
 }
 
