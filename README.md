@@ -1,16 +1,166 @@
-# React + Vite
+# Luka Muhasebe - Ön Muhasebe Sistemi
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Modern, bulut tabanlı ön muhasebe yazılımı. React + Vite + Supabase ile geliştirilmiştir.
 
-Currently, two official plugins are available:
+## 🚀 Özellikler
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- ✅ **Cari Hesap Yönetimi** - Müşteri ve tedarikçi takibi
+- ✅ **Stok Yönetimi** - Ürün ve stok takibi
+- ✅ **Fatura İşlemleri** - Alış/satış faturaları
+- ✅ **Kasa/Banka** - Nakit akış yönetimi
+- ✅ **Raporlar** - Detaylı finansal raporlar
+- ✅ **Multi-tenant SaaS** - Şirket bazlı izolasyon
+- ✅ **Authentication** - Güvenli kullanıcı girişi
+- ✅ **Realtime** - Anlık veri senkronizasyonu
 
-## React Compiler
+## 📋 Gereksinimler
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- Node.js 18+
+- npm veya yarn
+- Supabase hesabı
 
-## Expanding the ESLint configuration
+## 🛠️ Kurulum
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### 1. Projeyi klonlayın
+
+```bash
+git clone <repository-url>
+cd luka-muhasebe
+```
+
+### 2. Bağımlılıkları yükleyin
+
+```bash
+npm install
+```
+
+### 3. Supabase Kurulumu
+
+#### a) Supabase projesi oluşturun
+1. [Supabase](https://supabase.com) üzerinden yeni bir proje oluşturun
+2. Proje adı: `luka-muhasebe`
+3. Bölge: **Europe (Frankfurt)** (Türkiye'ye en yakın)
+
+#### b) Veritabanı şemasını çalıştırın
+1. Supabase Dashboard → SQL Editor'e gidin
+2. `supabase/schema.sql` dosyasındaki SQL komutlarını çalıştırın
+3. Bu işlem şunları oluşturur:
+   - Companies tablosu (şirketler)
+   - Users tablosu (kullanıcılar)
+   - Cari, Stok, Fatura, Kasa tabloları
+   - Row Level Security (RLS) politikaları
+   - Otomatik trigger'lar
+
+#### c) Environment variables ayarlayın
+1. `.env.example` dosyası zaten doğru bilgilerle doldurulmuş
+2. Eğer farklı bir Supabase projesi kullanıyorsanız:
+   ```bash
+   # Supabase Dashboard → Settings → API
+   VITE_SUPABASE_URL=your_project_url
+   VITE_SUPABASE_ANON_KEY=your_anon_key
+   ```
+
+### 4. Projeyi çalıştırın
+
+```bash
+npm run dev
+```
+
+Tarayıcınızda `http://localhost:5173` adresine gidin.
+
+## 🎯 İlk Kullanım
+
+1. **Kayıt Ol** - `/signup` sayfasından yeni hesap oluşturun
+2. **Şirket Bilgileri** - Kayıt sırasında şirket adınızı girin
+3. **Giriş Yap** - Email ve şifrenizle giriş yapın
+4. **Dashboard** - Anasayfadan modüllere erişin
+
+## 📁 Proje Yapısı
+
+```
+luka-muhasebe/
+├── src/
+│   ├── components/        # React bileşenleri
+│   │   ├── Sidebar.jsx
+│   │   ├── ProtectedRoute.jsx
+│   │   └── ...
+│   ├── contexts/          # React Context (Auth)
+│   │   └── AuthContext.jsx
+│   ├── pages/             # Sayfa bileşenleri
+│   │   ├── Login.jsx
+│   │   ├── Signup.jsx
+│   │   ├── Dashboard.jsx
+│   │   ├── Cari.jsx
+│   │   └── ...
+│   ├── services/          # Supabase servisleri
+│   │   └── supabaseService.js
+│   ├── utils/             # Yardımcı fonksiyonlar
+│   │   ├── validation.js
+│   │   ├── storage.js
+│   │   └── ...
+│   ├── styles/            # CSS dosyaları
+│   ├── supabaseClient.js  # Supabase client
+│   └── App.jsx
+├── supabase/
+│   └── schema.sql         # Veritabanı şeması
+├── .env.example           # Environment variables
+└── package.json
+```
+
+## 🔒 Güvenlik
+
+- **Row Level Security (RLS)** - Her şirket sadece kendi verilerine erişebilir
+- **Authentication** - Supabase Auth ile güvenli giriş
+- **Multi-tenant** - Şirketler arası veri izolasyonu
+- **Protected Routes** - Yetkisiz erişim engelleme
+
+## 🧪 Geliştirme
+
+### Build
+
+```bash
+npm run build
+```
+
+### Preview
+
+```bash
+npm run preview
+```
+
+### Lint
+
+```bash
+npm run lint
+```
+
+## 📚 Teknolojiler
+
+- **React 19** - UI framework
+- **Vite** - Build tool
+- **Supabase** - Backend (PostgreSQL + Auth + Realtime)
+- **React Router** - Routing
+- **Lucide React** - Icons
+- **React Toastify** - Notifications
+- **Recharts** - Charts
+- **jsPDF** - PDF export
+- **XLSX** - Excel export
+
+## 🎨 Klavye Kısayolları
+
+- **Alt+N** - Yeni kayıt ekle
+- **Ctrl+S** - Kaydet
+- **Ctrl+F** - Ara
+- **Esc** - Modal kapat
+
+## 📞 Destek
+
+Bir sorun mu buldunuz? [Issue açın](../../issues)
+
+## 📝 Lisans
+
+Bu proje özel bir projedir.
+
+---
+
+**Luka Muhasebe** - Modern Ön Muhasebe Çözümü 🚀
